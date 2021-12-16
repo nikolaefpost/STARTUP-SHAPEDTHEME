@@ -5,7 +5,6 @@
 }
 body{
     margin: 0;
-    /*box-sizing: content-box;*/
 }
 @font-face {
     font-family: Montserrat-Light;
@@ -38,14 +37,10 @@ body{
 }
 
 
-
-
-
-
 .home{
     width: 100vw;
     height: 100vh;
-    background-image: url('pic/first_backgr.png');
+    background-image: url('images/first_backgr.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 3% 15% 0 15%;
@@ -148,15 +143,10 @@ body{
     margin: 0 20px;
     font-family: Montserrat-Regular;
     font-size: 14px;
-
 }
 
 .service_single img{
     margin-bottom: 30px;
-}
-
-.service_single span{
-
 }
 
 .service_single p, .about_main_content p{
@@ -170,8 +160,6 @@ body{
 }
 
 .about_main{
-    /*display: flex;*/
-    /*flex-direction: column;*/
     margin: 70px 0;
 }
 

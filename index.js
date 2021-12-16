@@ -3,47 +3,47 @@ window.onload = function () {
 
     const data=[
         {
-            src: 'pic/img1.png',
+            src: 'images/img1.png',
             type: 'Branding',
             name: 'Hair Dresser'
         },
         {
-            src: 'pic/img2.png',
+            src: 'images/img2.png',
             type: 'Design',
             name: 'Pigeon mail'
         },
         {
-            src: 'pic/img3.png',
+            src: 'images/img3.png',
             type: 'Strategy',
             name: 'Business development'
         },
         {
-            src: 'pic/img4.png',
+            src: 'images/img4.png',
             type: 'Development',
             name: 'Nice photos'
         },
         {
-            src: 'pic/img5.png',
+            src: 'images/img5.png',
             type: 'Design',
             name: 'business development'
         },
         {
-            src: 'pic/img6.png',
+            src: 'images/img6.png',
             type: 'Strategy',
             name: 'Business development'
         },
         {
-            src: 'pic/img7.png',
+            src: 'images/img7.png',
             type: 'Branding',
             name: 'Hair Dresser'
         },
         {
-            src: 'pic/img8.png',
+            src: 'images/img8.png',
             type: 'Development',
             name: 'Pigeon mail'
         },
         {
-            src: 'pic/img9.png',
+            src: 'images/img9.png',
             type: 'Strategy',
             name: 'Business development'
         }
@@ -52,11 +52,6 @@ window.onload = function () {
 
     const works_types = Array.from(document.body.querySelectorAll('.works_head_subtitle > span'))
     works_types.map((item)=> item.onclick = sortData)
-
-    // function reductionInitial(id){
-    //     works_types.map((item)=> item.style.color = "black")
-    //     document.getElementById(id).style.color = 'red';
-    // }
 
     function sortData(e) {
         let sort_data=[]
