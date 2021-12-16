@@ -48,48 +48,48 @@ body{
     color: white;
 }
 
-.nav{
+.home_nav{
     /*margin: 5vh 14vh 0 14vh;*/
     display: flex;
     justify-content: space-between;
 }
 
-.nav_item{
+.home_nav_item{
     font-size: 16px;
     font-family: Montserrat-Light;
 }
 
-.logo{
+.home_nav_logo{
     font-size: 24px;
     font-family: Montserrat-SemiBold;
 }
 
 
-.nav_item span{
+.home_nav_item span{
     margin: 0 12px;
 }
 
-.captions{
+.home_captions{
     margin-top: 32vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.captions_first{
+.home_captions_first{
     font-size: 54px;
     font-family: Montserrat-Regular;
     letter-spacing: 4px;
 }
 
-.captions_second{
+.home_captions_second{
     font-size: 24px;
     font-family:  	Georgia, serif;
     /*fonts-weight: 100;*/
     margin-top: 2vh;
 }
 
-.captions_btn{
+.home_captions_btn{
     font-family: Montserrat-Light;
     font-size: 18px;
     background: transparent;
@@ -99,7 +99,7 @@ body{
     padding: 16px 44px;
 }
 
-.captions_btn:hover{
+.home_captions_btn:hover{
     color: #bd3e35;
     background: white;
     font-family: Montserrat-Regular
@@ -111,6 +111,7 @@ body{
     padding: 6% 15% 0 15%;
     color: #2c2c2c;
 }
+
 
 .service_head, .about_head, .works_head{
     display: flex;
