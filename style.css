@@ -65,8 +65,10 @@ body{
 }
 
 
-.home_nav_item span{
+.home_nav_item a{
     margin: 0 12px;
+    color: white;
+    text-decoration: none;
 }
 
 .home_captions{
