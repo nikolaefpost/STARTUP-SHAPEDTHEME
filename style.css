@@ -308,7 +308,12 @@ body{
 
 .works_head_subtitle span{
     margin-right: 12px;
+    cursor: pointer;
 }
+
+/*.works_head_subtitle span:hover{*/
+/*    cursor: pointer;*/
+/*}*/
 
 .works_content{
     display: flex;
