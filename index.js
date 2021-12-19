@@ -50,6 +50,7 @@ window.onload = function () {
 
     ]
 
+
     const works_types = Array.from(document.body.querySelectorAll('.works_head_subtitle > span'))
     works_types.map((item)=> item.onclick = sortData)
 
