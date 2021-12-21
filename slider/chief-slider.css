@@ -47,11 +47,11 @@
 }
 
 .slider__control[data-slide='prev'] {
-    left: 8px;
+    left: .7vw;
 }
 
 .slider__control[data-slide='next'] {
-    right: 8px;
+    right: .7vw;
 }
 
 .slider__control:hover,

@@ -77,11 +77,30 @@ window.onload = function () {
         sort_data.map((item=>{
             result += '<figure class="works_img"><img width="100%" src="'+item.src+'"><div class="works_hover">'
             result += '<figcaption class="works_hover_name">'+item.name+'</figcaption><span class="works_hover_type">'
-                +item.type+'</span><span class="works_hover_btn">VIEW &gt;</span> '
+                +item.type+'</span><span class="works_hover_btn">VIEW &#62;</span> '
             result +='</div></figure>'
         }))
         document.getElementById('root').innerHTML = result
     }
-
     sortData()
+
+    window.addEventListener("scroll", (event) => {
+       const navBar = document.getElementById('navBar')
+        const viewPortHeight = document.documentElement.clientHeight
+        const viewPortWidth = document.documentElement.clientWidth
+        let k;
+       if (viewPortWidth>1200) k = 0.85;
+       else if (viewPortWidth>600) k = 0.65;
+       else k = 0.4;
+
+        let scroll = this.scrollY;
+       if(scroll > k*viewPortHeight) {
+           navBar.style.color = '#2c2c2c'
+           navBar.querySelector('button').style.border = '1px solid #2c2c2c'
+       }
+        else {
+           navBar.style.color = 'white';
+           navBar.querySelector('button').style.border = '1px solid white'
+       }
+    });
 }
