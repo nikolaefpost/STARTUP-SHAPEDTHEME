@@ -15,49 +15,50 @@
         document.addEventListener('DOMContentLoaded', function () {
             const slider = new ChiefSlider('.slider', {
                 loop: true,
-                autoplay: true,
+                autoplay: false,
                 interval: 3000,
                 refresh: true,
             });
         });
     </script>
 </head>
-<a name="home">.</a>
+<a name="home"></a>
 <body>
-
-    <section class="home">
-
-        <Nav class="home_nav" id="navBar">
-            <div class="home_nav_logo">Startup</div>
-            <div class="home_nav_dropdown">
-                <button class="home_nav_dropdown_btn">Menu</button>
-                <div class="home_nav_dropdown_item">
-                    <a href="#home">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="#about">About</a>
-                    <a href="#works">Works</a>
-                    <a>Blog</a>
-                    <a>Clients</a>
-                    <a href="#contact">Contact</a>
+<div class="content">
+    <div class="wrapper_home">
+        <section class="home">
+            <Nav class="home_nav" id="navBar">
+                <div class="home_nav_logo">Startup</div>
+                <div class="home_nav_dropdown">
+                    <button class="home_nav_dropdown_btn">Menu</button>
+                    <div class="home_nav_dropdown_item">
+                        <a href="#home">Home</a>
+                        <a href="#services">Services</a>
+                        <a href="#about">About</a>
+                        <a href="#works">Works</a>
+                        <a>Blog</a>
+                        <a>Clients</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </div>
-            </div>
 
-        </Nav>
-        <div class="home_captions">
-            <div class="home_captions_first"><span>WELCOME </span><span>TO STARTUP</span></div>
-            <div class="home_captions_second">Your Favorite Creative Agency Template</div>
-            <span class="home_captions_btn">GET STARTED</span>
-        </div>
-    </section>
+            </Nav>
+            <div class="home_captions">
+                <div class="home_captions_first"><span>WELCOME </span><span>TO STARTUP</span></div>
+                <div class="home_captions_second">Your Favorite Creative Agency Template</div>
+                <span class="home_captions_btn">GET STARTED</span>
+            </div>
+        </section>
+    </div>
     <a name="services"></a>
     <section class="service">
-        <header class="service_head">
+        <div class="service_head">
             <div class="service_head_title">SERVICES</div>
-            <div class="service_head_line">_ __ __ _</div>
+            <div class="service_head_line"></div>
             <div class="service_head_subtitle">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</div>
-        </header>
-        <figure class="service_main">
-            <div class="service_single">
+        </div>
+        <div class="service_main">
+            <figure class="service_single">
                 <img src="images/service_icon1.svg">
                 <figcaption>CLEAN TYPOGRAPHY</figcaption>
                 <p>
@@ -65,7 +66,7 @@
                     Minima maxime quam architecto qou inventore harum ex
                     magini, dicta impedit. Lorem ipsum
                 </p>
-            </div>
+            </figure>
             <figure class="service_single">
                 <img src="images/service_icon2.svg">
                 <figcaption>ROCK SOLID CODE</figcaption>
@@ -84,15 +85,15 @@
                     magini, dicta impedit. Lorem ipsum
                 </p>
             </figure>
-        </figure>
+        </div>
     </section>
     <a name="about"></a>
     <section class="about">
-        <header class="about_head">
+        <div class="about_head">
             <div class="about_head_title">ABOUT US</div>
-            <div>_ __ __ _</div>
+            <div class="about_head_line"></div>
             <div class="about_head_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</div>
-        </header>
+        </div>
         <div class="about_main">
             <div class="about_main_content">
                 <p>
@@ -214,9 +215,9 @@
     </section>
     <a name="works"></a>
     <section class="works">
-        <header class="works_head">
+        <div class="works_head">
             <div class="works_head_title">LATEST WORKS</div>
-            <div>_ __ __ _</div>
+            <div class="works_head_line" ></div>
             <div class="works_head_subtitle">
                 <span id="all">All</span>
                 <span id="Branding">Branding</span>
@@ -224,7 +225,7 @@
                 <span id="Development">Development</span>
                 <span id="Strategy">Strategy</span>
             </div>
-        </header>
+        </div>
         <div class="works_content" id="root"></div>
     </section>
     <a name="contact"></a>
@@ -257,6 +258,9 @@
         </div>
         <span class="footer_license">&copy; 2015 STARTUP, DESIGNED BY SHAPEDTHEME</span>
     </footer>
+</div>
+
+
 
 
 </body>

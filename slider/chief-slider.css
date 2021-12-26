@@ -30,14 +30,14 @@
 
 .slider__control {
     position: absolute;
-    top: 40%;
+    top: 38.5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
+    width: 35px;
     color: #fff;
     text-align: center;
-    height: 45px;
+    height: 37px;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.2);
 }
@@ -47,11 +47,11 @@
 }
 
 .slider__control[data-slide='prev'] {
-    left: .7vw;
+    left: 15px;
 }
 
 .slider__control[data-slide='next'] {
-    right: .7vw;
+    right: 16px;
 }
 
 .slider__control:hover,
