@@ -75,7 +75,7 @@ window.onload = function () {
     function view(sort_data){
         let result ='';
         sort_data.map((item=>{
-            result += '<figure class="works_img"><img width="100%" src="'+item.src+'"><div class="works_hover">'
+            result += '<figure class="works_img"><img height="100%" src="'+item.src+'"><div class="works_hover">'
             result += '<figcaption class="works_hover_name">'+item.name+'</figcaption><span class="works_hover_type">'
                 +item.type+'</span><span class="works_hover_btn">VIEW &#62;</span> '
             result +='</div></figure>'

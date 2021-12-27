@@ -294,7 +294,6 @@ body{
     text-align: center;
     margin-right: 6px;
     margin-top: 10px;
-    /*padding-top: 2px;*/
 }
 
 .slider__control {
@@ -319,7 +318,7 @@ body{
 
 .works{
     padding-top: 126px;
-    padding-bottom: 179px;
+    padding-bottom: 185px;
 }
 .works_head_subtitle{
     font-family: Montserrat-Medium;
@@ -340,23 +339,22 @@ body{
     margin: 1% 1.1666%;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 .works_hover{
     position: absolute;
     top: 0;
     left: 0;
-    /*right: 0;*/
-    /*bottom: 0;*/
     width: 100%;
     height: 100%;
     background-color: rgba(255,22,0,0.5);
     z-index: 1;
-    /*visibility: hidden;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1.8vh;
+    padding: 95px 0 100px;
+    /*padding-bottom: 1.8vh;*/
     transform: translate(-100%, 0);
     -moz-transform: translate(-100%, 0);
     -ms-transform: translate(-100%, 0);
@@ -378,24 +376,23 @@ body{
 .works_hover_name{
     color: white;
     font-family: Montserrat-Regular;
-    font-size: 1.1vw;
-    letter-spacing: .015vw;
-    margin-bottom: 1.4vh;
+    font-size: 18px;
+    margin-bottom: 11px;
 }
 .works_hover_type{
     color: white;
     font-family: RobotoSlab-Regular;
-    font-size: .7vw;
-    margin-bottom: 3vh;
+    font-size: 10px;
+    margin-bottom: 26px;
 }
 .works_hover_btn{
-    padding: 1vh 0 ;
+    padding: 10px 0 ;
     background: white;
     color: #d06455;
-    width: 6.2vw;
+    width: 100px;
     text-align: center;
     font-family: Montserrat-SemiBold;
-    font-size: 1.6vh;
+    font-size: 14px;
 }
 
 .footer{
@@ -456,7 +453,6 @@ span svg path {
         flex: 0 0 50%;
         max-width: 50%;
     }
-
 }
 
 @media (min-width: 1200px) {
@@ -469,7 +465,6 @@ span svg path {
         max-width: 25%;
     }
 }
-
 
 @media(max-width: 600px) {
     body{
@@ -530,7 +525,6 @@ span svg path {
         border: 1px solid white;
         cursor: pointer;
         padding: 8px 24px;
-        /*margin-top:20px;*/
     }
     .home_nav_dropdown_btn:hover{
         background-color: white;
@@ -543,8 +537,6 @@ span svg path {
     .home_nav_dropdown_item{
         display: none;
         background-color: transparent;
-
-        /*min-width: 200px;*/
     }
     .home_nav_dropdown_item a{
         background: #eeeeee;
@@ -789,71 +781,31 @@ span svg path {
         font-size: 3vw;
         letter-spacing: .015vw;
     }
-
     .home_captions_second{
         font-size: 1.38vw;
     }
-
     .home_captions_btn{
-        font-family: Montserrat-Light;
         font-size: 1vw;
-        background: transparent;
-        color: white;
         margin-top: 5.35vh;
         border: 2px solid white;
         padding: 1.5vh 2.1vw;
-        transition: background 1s ease;
-        -webkit-transition: background 1s ease;
-        -moz-transition: background 1s ease;
-        -o-transition: background 1s ease;
-
-        transition: color 1.5s ease;
-        -webkit-transition: color 1.5s ease;
-        -moz-transition: color 1.5s ease;
-        -o-transition: color 1.5s ease;
     }
-
-    .home_captions_btn:hover{
-        color: #bd3e35;
-        background: white;
-        font-family: Montserrat-Regular
-    }
-
-
-
 
     .service, .about, .works{
-        display: flex;
-        flex-direction: column;
         padding: 10.5vh 13.5vw 0 13.5vw;
-        color: #2c2c2c;
     }
-
-
-    .service_head, .about_head, .works_head{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-    }
-
     .service_head_title, .about_head_title, .works_head_title{
-        font-family: Montserrat-Medium;
         font-size: 1.24vw;
         margin-bottom: 1.5vh;
-        color: #555555;
     }
 
     .service_head_subtitle, .about_head_subtitle, .works_head_subtitle{
-        font-family: RobotoSlab-Regular;
         font-size: .89vw;
         margin-top: 2.7vh;
     }
 
     .service_main{
-        display: flex;
         margin: 8vh 0 8.5vh 0;
-        /*justify-content: left;*/
     }
 
     .service_single{
@@ -863,12 +815,10 @@ span svg path {
         margin: 0 1.2vw;
 
     }
-
     .service_single figcaption{
         font-family: Montserrat-Regular;
         font-size: .88vw;
     }
-
     .service_single p{
         font-family: Montserrat-Regular;
         font-size: .72vw;
@@ -879,30 +829,20 @@ span svg path {
         margin-bottom: 3vh;
         width: 5.5vw;
     }
-
     .service_single p, .about_main_content p{
-        text-align: center;
         text-indent: .3em;
         line-height: 2.5vh;
-    }
-
-
-    .about{
-        background: #f8f8f8;
     }
 
     .about_head{
         margin-top: 1.1vh;
     }
-
     .about_main{
         margin: 6vh 0;
     }
-
     .about_main_content{
         display: flex;
     }
-
     .about_main_content p{
         margin: 1.5vh .85vw .5vh .85vw;
         font-family: Montserrat-Regular;
@@ -912,163 +852,49 @@ span svg path {
         text-indent: 0
     }
 
-    .darkened::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.3);
-        z-index: 1;
-    }
-
     .slider__content_section{
-        position: absolute;
         bottom: 14%;
         left: 31%;
-        color: white;
-        display: flex;
-        z-index: 100;
     }
-    .q{
-        position: inherit;
-    }
-
     .slider__content_section img{
         height: 3vh;
         margin-right: .1vw;
         padding: .6vh .4vw;
     }
-    .slider__content_section img:hover{
-        background: #bd3e35;
-    }
-
-    /*.container {*/
-    /*    max-width: 350px;*/
-    /*    margin: 0 auto;*/
-    /*}*/
-
     .slider__item-content {
         padding-left: 1vw;
         padding-right: 1vw;
     }
-
-    .slider__content_header {
-        position: relative;
-    }
-
-    .slider__content_img {
-        display: block;
-        height: auto;
-        max-width: 100%;
-    }
-
     .slider__content_name {
-        font-family: Montserrat-Regular;
         font-size: .88vw;
         text-align: center;
         margin: 2vh 0 1.3vh 0;
     }
 
     .slider__content_post {
-        font-family: Montserrat-Regular;
         font-size: .68vw;
         text-align: center;
         margin-top: 0;
-    }
-
-    .slider__control {
-        background-color: #cc4e46;
-    }
-
-    .slider__control:hover,
-    .slider__control:focus {
-        background-color: #8e8e8e;
-    }
-
-    .slider__indicators {
-        bottom: -35px;
-    }
-
-    .slider__indicators li {
-        background-color: #eee;
-    }
-
-    .slider__indicators li.active {
-        background-color: #757575;
     }
 
     .works{
         margin-bottom: 20vh;
         padding-top: 7.35vh;
     }
-
     .works_head_subtitle{
-        font-family: Montserrat-Medium;
         font-size: .88vw;;
         margin: 3vh 0 6.7vh 0;
     }
-
     .works_head_subtitle span{
         margin: 0 .4vw;
-        cursor: pointer;
     }
-
-    /*.works_head_subtitle span:hover{*/
-    /*    cursor: pointer;*/
-    /*}*/
-
-    .works_content{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .works_img{
         width: 31%;
         margin: 1.3vh .80vw;
-        position: relative;
-        overflow: hidden;
     }
-
     .works_hover{
-        position: absolute;
-        top: 0;
-        left: 0;
-        /*right: 0;*/
-        /*bottom: 0;*/
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255,22,0,0.5);
-        z-index: 1;
-        /*visibility: hidden;*/
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 1.8vh;
-        transform: translate(-100%, 0);
-        -moz-transform: translate(-100%, 0);
-        -ms-transform: translate(-100%, 0);
-        -webkit-transform: translate(-100%, 0);
-        -o-transform: translate(-100%, 0);
-        transition: 1s ease;
-        -webkit-transition: 1s ease;
-        -ms-transition: 1s ease;
-        -moz-transition: 1s ease;
-        -o-transition: 1s ease;
     }
-
-
-    .works_img:hover .works_hover{
-        transform: translate(0, 0);
-        -moz-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-        -webkit-transform: translate(0, 0);
-        -o-transform: translate(0, 0);
-    }
-
     .works_hover_name{
         color: white;
         font-family: Montserrat-Regular;
@@ -1077,78 +903,37 @@ span svg path {
         margin-bottom: 1.4vh;
 
     }
-
     .works_hover_type{
-        color: white;
-        font-family: RobotoSlab-Regular;
         font-size: .7vw;
         margin-bottom: 3vh;
     }
-
     .works_hover_btn{
         padding: 1vh 0 ;
-        background: white;
-        color: #d06455;
         width: 6.2vw;
-        text-align: center;
-        font-family: Montserrat-SemiBold;
         font-size: 1.6vh;
     }
 
     .footer{
         height: 33vh;
-        background-color: #c0301c;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-left: 1vw;
     }
-
-    .footer_social{
-        display: flex;
-    }
-
     .footer_social span{
         width: 2vw;
         height: 2vw;
         border-radius: 50%;
-        border: 1px solid white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-right: 1vw;
-        fill:white;
-        transition: background-color 1s ease;
-        -webkit-transition: background-color 1s ease;
-        -moz-transition: background-color 1s ease;
-        -o-transition: background-color 1s ease;
-        transition: fill 1.5s ease;
-        -webkit-transition: fill 1.5s ease;
-        -moz-transition: fill 1.5s ease;
-        -o-transition: fill 1.5s ease;
     }
-
-    .footer_social span:hover{
-        background-color: white;
-        fill: #c0301c;
-    }
-
-    span svg path {
-        fill:inherit;
-    }
-
     .footer div{
         margin: 1.5vh 0 6.5vh 0;
     }
-
     .footer_license{
-        color: white;
-        font-family: Montserrat-Regular;
         font-size: .7vw;
         margin-right: 1.2vw;
     }
-
 }
 
 @media    (min-width : 1600px) {
@@ -1158,7 +943,4 @@ span svg path {
     }
 }
 
-@media(max-width: 600px) {
-
-}
 
