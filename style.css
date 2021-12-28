@@ -70,7 +70,6 @@ body{
     align-items: center;
     color: white;
     z-index: 10;
-    /*margin-top: .9vh;*/
 }
 .home_nav_dropdown_btn{
     display: none;
@@ -325,8 +324,12 @@ body{
     margin-bottom: 53px;
 }
 .works_head_subtitle span{
-    margin: 0 .4vw;
+    margin-right: 13px;
+    /*letter-spacing: .3px;*/
     cursor: pointer;
+}
+.works_head_subtitle span:last-child{
+    margin-right: 0;
 }
 .works_content{
     display: flex;
