@@ -1,0 +1,133 @@
+
+@mixin font($size, $family, $spacing:0)
+  font:
+    size: $size
+    family: $family
+  letter-spacing: $spacing
+
+.darkened::before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0,0,0,0.3)
+  z-index: 1
+
+.q
+  position: inherit
+
+.container
+  max-width: 350px
+  margin: 0 auto
+
+.slider
+  &__wrapper
+    overflow: hidden
+    margin-left: 3px
+    margin-right: 3px
+
+  &__content
+    &_section
+      position: absolute
+      bottom: 37px
+      left: 79px
+      color: white
+      display: flex
+      z-index: 100
+
+      img
+        padding: 5px 8px 5px
+        &:hover
+          background: #bd3e35
+    &_header
+      position: relative
+
+    &_img
+      display: block
+      height: auto
+      max-width: 100%
+
+    &_name
+      @include font(14px, Montserrat-Regular)
+      text-align: center
+      margin-left: 10px
+      margin-bottom: 0
+      padding-top: 2px
+
+    &_post
+      @include font(11px, Montserrat-Regular)
+      text-align: center
+      margin-right: 6px
+      margin-top: 10px
+
+  &__item-content
+    padding-left: 12px
+    padding-right: 15px
+
+  &__control
+    background-color: #cc4e46
+
+    &:hover, &:focus
+      background-color: #8e8e8e
+
+  &__indicators
+    bottom: -35px
+
+    li
+      background-color: #eee
+
+    li.active
+      background-color: #757575
+
+@media (max-width: 600px)
+  .slider__content
+    &_name
+      font-size: 3vw
+
+    &_post
+      font-size: 2.5vw
+
+@media (min-width : 601px) and (max-width : 1000px)
+  .slider__content_name
+    font-size: 2vw
+  .slider__content_post
+    font-size: 1.5vw
+
+@media  (min-width : 1001px) and (max-width : 1600px)
+  .slider__content
+    &_section
+      bottom: 14%
+        left: 31%
+      img
+        height: 3vh
+        margin-right: .1vw
+        padding: .6vh .4vw
+    &_name
+      font-size: .88vw
+      margin: 2vh 0 1.3vh 0
+    &_post
+      font-size: .68vw
+      margin-top: 0
+    &-content
+      padding-left: 1vw
+      padding-right: 1vw
+
+@media (min-width: 768px)
+  .container
+    max-width: 700px
+    margin: 0 auto
+
+  .slider__item
+    flex: 0 0 50%
+    max-width: 50%
+
+@media (min-width: 1200px)
+  .container
+    max-width: 100%
+    margin: 57px auto
+
+  .slider__item
+    flex: 0 0 25%
+    max-width: 25%

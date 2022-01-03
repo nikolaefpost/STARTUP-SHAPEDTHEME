@@ -39,55 +39,598 @@ body
 %flex-j-between
   display: flex
   justify-content: space-between
+  align-items: center
 
 %flex-column-al-c
   display: flex
   flex-direction: column
   align-items: center
 
-%ml16
-  font-size: 16px
-  font-family: Montserrat-Light
+@mixin font($size, $family, $spacing:0)
+  font:
+    size: $size
+    family: $family
+  letter-spacing: $spacing
 
-%msb24
-  font-size: 24px
-  font-family: Montserrat-SemiBold
+@mixin flex($dir: row, $just: center, $align: center, $disp: flex)
+  display: $disp
+  flex-direction: $dir
+  justify-content: $just
+  align-items: center
+
+=transition($property...)
+  -webkit-transition: $property
+  -ms-transition: $property
+  -o-transition: $property
+  transition: $property
+
+=transform($property...)
+  -webkit-transform: $property
+  -ms-transform: $property
+  -o-transform: $property
+  transform: $property
+
+.content
+  width: 100vw
+  margin: 0 auto
+
+.wrapper_home
+  margin: 0
+  height: 770px
+  background:
+    image: url('images/first_backgr.png')
+    repeat: no-repeat
+    size: cover
 
 .home
-  width: 100vw
-  height: 100vh
-  background-image: url('images/first_backgr.png')
-  background-repeat: no-repeat
-  background-size: cover
-  padding: 3% 15% 0 15%
-  box-sizing: border-box
-  color: white
+  padding: 311px 3% 0
 
   &_nav
-   @extend %flex-j-between
+    @extend %flex-j-between
+    position: fixed
+    top: 35px
+    left: calc((100% - 1600px)/2 + 230px)
+    width: 1130px
+    display: flex
+    color: white
+    z-index: 10
 
-  &_nav_item
-    @extend %ml16
+    &_dropdown_btn
+      display: none
 
-    a
-      margin: 0 12px
-      color: white
-      text-decoration: none
-      cursor: pointer
+    &_logo
+      @include font(24px, Montserrat-SemiBold, 0)
 
-  &__nav_logo
-    @extend %msb24
+    &_dropdown_item
+      @include font(14px, Montserrat-Light, 1px)
+      margin-right: 23.5px
+
+      a
+        color: inherit
+        text-decoration: none
+        cursor: pointer
 
   &_captions
     @extend %flex-column-al-c
-    margin-top: 32vh
+    color: white
 
-  &_captions_first
-    font-size: 54px
-    font-family: Montserrat-Regular
-    letter-spacing: 4px
+    &_first
+      @include font(47px, Montserrat-Regular, 1px)
+      text-align: center
+      margin-bottom: 19px
 
-  &_captions_second
-    font-size: 24px
-    font-family:  	Georgia, serif
-    margin-top: 2vh
+    &_second
+      @include font(21px, Georgia, .5px)
+      margin-bottom: 49px
+
+    &_btn
+      @include font(16px, Montserrat-Light, 0)
+      background: transparent
+      color: white
+      border: 2px solid white
+      padding: 14px 34px 13px 32px
+      margin-right: 9px
+      +transition(background-color 1s ease-out)
+
+      &:hover
+        color: #bd3e35
+        background: white
+        font-family: Montserrat-Regular
+
+.service, .about, .works
+  @extend %flex-column-al-c
+  padding: 94px 215px 71px
+  color: #2c2c2c
+
+  &_head
+    @extend %flex-column-al-c
+
+    &_title
+      @include font(20px, Montserrat-Medium)
+      margin-bottom: 26px
+      color: #555555
+
+    &_line
+      border-bottom: 2px solid black
+      width: 50px
+      margin-bottom: 26px
+
+    &_subtitle
+      @include font(14px, RobotoSlab-Regular)
+
+.service
+  &_head
+    margin-bottom: 53px
+
+  &_main
+    display: flex
+
+    figure
+      @extend %flex-column-al-c
+      margin-right: 5px
+      margin-left: 5px
+
+      &:last-child
+        margin-right: 0
+
+      &:first-child
+        margin-left: 13px
+
+  &_single
+    img
+      margin-bottom: 25px
+
+    figcaption
+      @include font(14px, Montserrat-Regular)
+      margin-right: 11px
+      margin-bottom: 3px
+
+    p
+      @include font(11px, Montserrat-Regular, .3px)
+      text-align: center
+      line-height: 24px
+      margin-right:  8px
+
+.about
+  background: #f8f8f8
+  padding-bottom: 0px
+
+  &_head
+    margin-bottom: 52px
+
+  &_main_content
+    display: flex
+
+    p
+      @include font(11px, Montserrat-Regular, .3px)
+      margin-right: 14px
+      margin-left: 14px
+      text-align: left
+      line-height: 24px
+
+@import slider
+
+.works
+  padding-top: 126px
+  padding-bottom: 185px
+
+  &_head_subtitle
+    font-family: Montserrat-Medium
+    margin-bottom: 53px
+
+    span
+      margin-right: 13px
+      cursor: pointer
+
+      &:last-child
+        margin-right: 0
+
+  &_content
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    margin-top: 5px
+
+  &_img
+    width: 31%
+    margin: 1% 1.1666%
+    position: relative
+    overflow: hidden
+    box-sizing: border-box
+
+    &:hover .works_hover
+      +transform(translate(0, 0))
+
+  &_hover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255,22,0,0.5)
+    z-index: 1
+    @extend %flex-column-al-c
+    justify-content: center
+    +transform(translate(-100%, 0))
+    +transition(1s ease)
+
+    &_name
+      @include font(18px, Montserrat-Regular)
+      color: white
+      margin-bottom: 11px
+
+    &_type
+      @include font(10px, RobotoSlab-Regular)
+      color: white
+      margin-bottom: 26px
+
+    &_btn
+      @include font(14px, Montserrat-SemiBold)
+      padding: 10px 0
+      background: white
+      color: #d06455
+      width: 100px
+      text-align: center
+
+span svg path
+  fill: inherit
+
+.footer
+  height: 299px
+  background-color: #c0301c
+  text-align: center
+  padding-top: 100px
+
+  &_social
+    @include flex()
+    margin-bottom: 57px
+
+    span
+      @include flex()
+      width: 34px
+      height: 34px
+      border: 1px solid white
+        radius: 50%
+      margin-right: 15px
+      fill: white
+      +transition(background-color 1s ease)
+      +transition(fill 1.5s ease)
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        background-color: white
+        fill: #c0301c
+
+  &_license
+    @include font(11px, RobotoSlab-Regular)
+    color: white
+    margin-right: 34px
+
+@media (max-width: 600px)
+  body
+    height: 40vh
+
+  .home
+    height: 31vh
+
+    &_nav
+      left: 5%
+      width: 92%
+      align-items: flex-start
+
+      &_logo
+        font-size: 5vw
+
+      &_dropdown
+        position: relative
+        display: inline-block
+
+        &_item
+          font-size: 2.5vw
+          display: none
+          background-color: transparent
+
+          a
+            background: #eeeeee
+            color: #c0301c
+            padding: 12px  16px
+            display: block
+
+            &:hover
+              background: #8e8e8e
+              color: #eeeeee
+
+        &_btn
+          display: block
+          font-size: 3vw
+          font-family: Montserrat-SemiBold
+          background-color: transparent
+          color: inherit
+          border: 1px solid white
+          cursor: pointer
+          padding: 8px 24px
+
+          &:hover .home_nav_dropdown_item
+            display: block
+            margin: 0
+
+    &_captions
+      margin-top: 7vh
+
+      &_first
+        @include flex(column)
+        font-size: 6vw
+
+      &_second
+        font-size: 3vw
+        margin-top: 2vh
+
+      &_btn
+        font-size: 3vw
+        color: inherit
+        margin-top: 5.35vh
+        padding: 1.5vh 8vw
+
+  .service, .about, .works
+    padding: 4vh 5vw 0 5vw
+
+    &_head_title
+      font-size: 5vw
+
+    &_head_subtitle
+      font-size: 2.5vw
+
+  .service
+    &_main
+      flex-direction: column
+      margin: 4vh 0 4vh 0
+
+      &_content p
+        font-size: 2.5vw
+
+    &_single
+      p
+        font-size: 2.5vw
+
+      figcaption
+        font-size: 3vw
+
+      img
+        margin-bottom: 2vh
+        width: 10vw
+
+  .works
+    &_head_subtitle
+      font-size: 3vw
+
+    &_img
+      width: 96%
+      margin: 2vh .80vw
+
+    &_hover
+      background-color: transparent
+      visibility: visible
+      +transform(translate(0, 0))
+
+      &_name
+        color: #d06455
+        font-size: 3.5vw
+        background: #eeeeee
+        border-radius: 10vw
+
+      &_type
+        color: #d06455
+        font-size: 2.5vw
+        background: #eeeeee
+        border-radius: 10vw
+
+      &_btn
+        background: #eeeeee
+        color: #d06455
+        width: 25vw
+        font-size: 2.5vh
+        border: 1px solid #d06455
+        border-radius: 25vw
+
+  .footer
+    &_social span
+      width: 10vw
+      height: 10vw
+      margin-right: 3vw
+
+    &_license
+      font-size: 1.5vw
+
+@media (min-width : 601px) and (max-width : 1000px)
+  body
+    height: 65vh
+
+  .home
+    &_nav
+      left: 10%
+      width: 80%
+
+      &_dropdown_item
+        font-size: 1.9vw
+      &_logo
+        font-size: 3vw
+
+    &_captions_first
+      font-size: 6vw
+    &_captions_second
+      font-size: 2vw
+      margin-top: 2vh
+    &_captions_btn
+      font-size: 2vw
+      margin-top: 5.35vh
+      padding: 1.5vh 5vw
+
+  .service, .about, .works
+    padding: 4vh 5vw 0 5vw
+
+    &_head_title
+      font-size: 3vw
+    &_head_subtitle
+      font-size: 1.5vw
+  .service_single
+    p
+      font-size: 1.5vw
+    figcaption
+      font-size: 2vw
+
+  .about_main_content
+      flex-direction: column
+      p
+        margin: .5vh .85vw 1.5vh .85vw
+        font-size: 1.5vw
+        text-indent: 1vw
+
+  .works
+    margin-bottom: 5vh
+    &_head_subtitle
+      font-size: 2vw
+    &_img
+      width: 46%
+      margin: 2vh .80vw
+    &_hover
+      background-color: transparent
+      visibility: visible
+      &_name
+        color: #d06455
+        font-size: 2.5vw
+        background: #eeeeee
+        border-radius: 10vw
+      &_type
+        color: #d06455
+        font-size: 2vw
+        background: #eeeeee
+        border-radius: 10vw
+      &_btn
+        background: #eeeeee
+        width: 15vw
+        font-size: 1.5vh
+        border: 1px solid #d06455
+        border-radius: 25vw
+
+  .footer
+    height: 160px
+    padding-top: 50px
+    div
+      margin: 1.5vh 0 1.5vh 0
+    &_social span
+      width: 5vw
+      height: 5vw
+
+@media  (min-width : 1001px) and (max-width : 1600px)
+  .wrapper_home
+    height: 60vw
+
+  .home
+    padding: 24% 3%
+    &_nav
+      top: 3%
+      left: 14.2%
+      width: 71.6%
+      &_dropdown_item
+        font-size: .9vw
+        a
+          margin: 0 .92vw
+      &_logo
+        font-size: 1.53vw
+    &_captions
+      &_first
+        font-size: 3vw
+        letter-spacing: .015vw
+      &_second
+        font-size: 1.38vw
+      &_btn
+        font-size: 1vw
+        margin-top: 5.35vh
+        padding: 1.5vh 2.1vw
+
+  .service, .about, .works
+    padding: 10.5vh 13.5vw 0 13.5vw
+    &_head_title
+      font-size: 1.24vw
+      margin-bottom: 1.5vh
+    &_head_subtitle
+      font-size: .89vw
+      margin-top: 2.7vh
+
+  .service
+    &_main
+      margin: 8vh 0 8.5vh 0
+    &_single
+      @include flex(column)
+      margin: 0 1.2vw
+      figcaption
+        font-size: .88vw
+      p
+        font-size: .72vw
+        margin-top: 2vh
+        text-indent: .3em
+        line-height: 2.5vh
+      img
+        margin-bottom: 3vh
+        width: 5.5vw
+
+  .about
+    &_head
+      margin-top: 1.1vh
+    &_main
+      margin: 6vh 0
+      &_content p
+        margin: 1.5vh .85vw .5vh .85vw
+        font-size: .72vw
+        line-height: 2.65vh
+        text-indent: 0
+
+  .works
+    margin-bottom: 20vh
+    padding-top: 7.35vh
+    &_head_subtitle
+      font-size: .88vw
+      margin: 3vh 0 6.7vh 0
+      span
+        margin: 0 .4vw
+    &_img
+      width: 31%
+      margin: 1.3vh .80vw
+    &_hover
+      padding-bottom: 1.8vh
+      &_name
+        @include font(.7vw, Montserrat-Regular, .015vw)
+        margin-bottom: 1.4vh
+      &_type
+        font-size: .7vw
+        margin-bottom: 3vh
+      &_btn
+        padding: 1vh 0
+        width: 6.2vw
+        font-size: 1.6vh
+
+  .footer
+    height: 33vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 1vw
+    div
+      margin: 1.5vh 0 6.5vh 0
+    &_social span
+      width: 2vw
+      height: 2vw
+      border-radius: 50%
+      margin-right: 1vw
+    &_license
+      font-size: .7vw
+      margin-right: 1.2vw
+
+
+
+@media (min-width : 1600px)
+  .content
+    width: 1600px
+    margin: 0 auto
