@@ -81,12 +81,15 @@ body {
   font-size: 14px;
   font-family: Montserrat-Light;
   letter-spacing: 1px;
-  margin-right: 23.5px;
 }
 .home_nav_dropdown_item a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  margin-right: 23.5px;
+}
+.home_nav_dropdown_item a:last-child {
+  margin-right: 0;
 }
 .home_captions {
   color: white;
@@ -721,7 +724,7 @@ span svg path {
 }
 @media (min-width: 1001px) and (max-width: 1600px) {
   .wrapper_home {
-    height: 60vw;
+    height: 60vh;
   }
 
   .home {

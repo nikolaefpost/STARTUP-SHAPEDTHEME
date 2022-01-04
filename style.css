@@ -36,10 +36,6 @@
 
 body{
     margin: 0;
-    /*height: 100px;*/
-    /*background-image: url('images/first_backgr.png');*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
 }
 
 .content{
@@ -57,7 +53,7 @@ body{
 
 .home{
     padding: 311px 3% 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 .home_nav{
@@ -74,27 +70,21 @@ body{
 .home_nav_dropdown_btn{
     display: none;
 }
-
 .home_nav_dropdown_item{
     font-size: 14px;
     font-family: Montserrat-Light;
     letter-spacing: 1px;
+    margin-right: 23.5px;
 }
-
 .home_nav_logo{
     font-size: 24px;
     font-family: Montserrat-SemiBold;
 }
 
-
 .home_nav_dropdown_item a{
-    margin-right: 23.5px;
     color: inherit;
     text-decoration: none;
     cursor: pointer;
-}
-.home_nav_dropdown_item a:last-child{
-    margin-right: 0;
 }
 .home_captions{
     display: flex;
@@ -140,7 +130,7 @@ body{
 .home_captions_btn:hover{
     color: #bd3e35;
     background: white;
-    font-family: Montserrat-Regular
+    font-family: Montserrat-Regular;
 }
 
 .service, .about, .works{
@@ -238,22 +228,8 @@ body{
     background-color: rgba(0,0,0,0.3);
     z-index: 1;
 }
-.slider__content_section{
-    position: absolute;
-    bottom: 37px;
-    left: 79px;
-    color: white;
-    display: flex;
-    z-index: 100;
-}
 .q{
     position: inherit;
-}
-.slider__content_section img{
-    padding: 5px 8px 5px;
-}
-.slider__content_section img:hover{
-    background: #bd3e35;
 }
 .container {
     max-width: 350px;
@@ -264,14 +240,24 @@ body{
     margin-left: 3px;
     margin-right: 3px;
 }
-.slider__item-content {
-    padding-left: 12px;
-    padding-right: 15px;
+.slider__content_section{
+    position: absolute;
+    bottom: 37px;
+    left: 79px;
+    color: white;
+    display: flex;
+    z-index: 100;
+}
+
+.slider__content_section img{
+    padding: 5px 8px 5px;
+}
+.slider__content_section img:hover{
+    background: #bd3e35;
 }
 .slider__content_header {
     position: relative;
 }
-
 .slider__content_img {
     display: block;
     height: auto;
@@ -294,6 +280,13 @@ body{
     margin-right: 6px;
     margin-top: 10px;
 }
+
+
+.slider__item-content {
+    padding-left: 12px;
+    padding-right: 15px;
+}
+
 
 .slider__control {
     background-color: #cc4e46;
@@ -418,7 +411,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-right: 15px;
-    fill:white;
+    fill: white;
     transition: background-color 1s ease;
     -webkit-transition: background-color 1s ease;
     -moz-transition: background-color 1s ease;
@@ -550,10 +543,7 @@ span svg path {
     }
     .home_nav_dropdown_item a:hover{
         background: #8e8e8e;
-        color: #c0301c;
-        padding:12px  16px;
-        text-decoration: none;
-        display: block;
+        color: #eeeeee;
     }
     .home_nav_dropdown:hover .home_nav_dropdown_item{
         display: block;
@@ -595,7 +585,7 @@ span svg path {
         font-size: 2.5vw;
     }
     .works_head_subtitle{
-        font-size: 3vw;;
+        font-size: 3vw;
     }
     .works_img{
         width: 96%;
@@ -611,7 +601,7 @@ span svg path {
         color: #d06455;
         font-size: 3.5vw;
         background: #eeeeee;
-        border-radius: 10vw;;
+        border-radius: 10vw;
     }
 
     .works_hover_type{
@@ -643,6 +633,10 @@ span svg path {
     body{
         height: 65vh;
     }
+    .home_nav{
+        left: 10%;
+        width: 80%;
+    }
     .home_nav_dropdown_item{
         font-size: 1.9vw;
         font-family: Montserrat-Light;
@@ -661,17 +655,9 @@ span svg path {
         font-family:  	Georgia, serif;
         margin-top: 2vh;
     }
-    .home_nav{
-        left: 10%;
-        width: 80%;
-    }
     .home_captions_btn{
-        font-family: Montserrat-Light;
         font-size: 2vw;
-        background: transparent;
-        color: white;
         margin-top: 5.35vh;
-        border: 2px solid white;
         padding: 1.5vh 5vw;
     }
     .service, .about, .works{
@@ -709,12 +695,11 @@ span svg path {
         margin-bottom: 5vh;
     }
     .works_head_subtitle{
-        font-size: 2vw;;
+        font-size: 2vw;
     }
     .works_img{
         width: 46%;
         margin: 2vh .80vw;
-        position: relative;
     }
     .works_hover{
         background-color: transparent;
@@ -725,7 +710,7 @@ span svg path {
         color: #d06455;
         font-size: 2.5vw;
         background: #eeeeee;
-        border-radius: 10vw;;
+        border-radius: 10vw;
     }
 
     .works_hover_type{
@@ -737,14 +722,14 @@ span svg path {
 
     .works_hover_btn{
         background: #eeeeee;
-        color: #d06455;
         width: 15vw;
         font-size: 1.5vh;
         border: 1px solid #d06455;
         border-radius: 25vw;
     }
     .footer{
-        height: 15vh;
+        height: 160px;
+        padding-top: 50px;
     }
     .footer div{
         margin: 1.5vh 0 1.5vh 0;
@@ -774,11 +759,11 @@ span svg path {
     .home_nav_dropdown_item{
         font-size: .9vw;
     }
-    .home_nav_logo{
-        font-size: 1.53vw;
-    }
     .home_nav_dropdown_item a{
         margin: 0 .92vw;
+    }
+    .home_nav_logo{
+        font-size: 1.53vw;
     }
     .home_captions_first{
         font-size: 3vw;
@@ -790,7 +775,6 @@ span svg path {
     .home_captions_btn{
         font-size: 1vw;
         margin-top: 5.35vh;
-        border: 2px solid white;
         padding: 1.5vh 2.1vw;
     }
 
@@ -843,16 +827,11 @@ span svg path {
     .about_main{
         margin: 6vh 0;
     }
-    .about_main_content{
-        display: flex;
-    }
     .about_main_content p{
         margin: 1.5vh .85vw .5vh .85vw;
-        font-family: Montserrat-Regular;
         font-size: .72vw;
-        text-align: left;
         line-height: 2.65vh;
-        text-indent: 0
+        text-indent: 0;
     }
 
     .slider__content_section{
@@ -864,20 +843,17 @@ span svg path {
         margin-right: .1vw;
         padding: .6vh .4vw;
     }
+    .slider__content_name {
+        font-size: .88vw;
+        margin: 2vh 0 1.3vh 0;
+    }
+    .slider__content_post {
+        font-size: .68vw;
+        margin-top: 0;
+    }
     .slider__item-content {
         padding-left: 1vw;
         padding-right: 1vw;
-    }
-    .slider__content_name {
-        font-size: .88vw;
-        text-align: center;
-        margin: 2vh 0 1.3vh 0;
-    }
-
-    .slider__content_post {
-        font-size: .68vw;
-        text-align: center;
-        margin-top: 0;
     }
 
     .works{
@@ -899,8 +875,6 @@ span svg path {
         padding-bottom: 1.8vh;
     }
     .works_hover_name{
-        color: white;
-        font-family: Montserrat-Regular;
         font-size: 1.1vw;
         letter-spacing: .015vw;
         margin-bottom: 1.4vh;
@@ -921,7 +895,6 @@ span svg path {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         padding-left: 1vw;
     }
     .footer_social span{

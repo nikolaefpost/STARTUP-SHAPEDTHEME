@@ -103,12 +103,15 @@ body
 
     &_dropdown_item
       @include font(14px, Montserrat-Light, 1px)
-      margin-right: 23.5px
 
       a
         color: inherit
         text-decoration: none
         cursor: pointer
+        margin-right: 23.5px
+        &:last-child
+          margin-right: 0
+
 
   &_captions
     @extend %flex-column-al-c
@@ -525,7 +528,7 @@ span svg path
 
 @media  (min-width : 1001px) and (max-width : 1600px)
   .wrapper_home
-    height: 60vw
+    height: 60vh
 
   .home
     padding: 24% 3%

@@ -89,11 +89,12 @@ window.onload = function () {
         const viewPortHeight = document.documentElement.clientHeight
         const viewPortWidth = document.documentElement.clientWidth
         let k;
-       if (viewPortWidth>1200) k = 0.85;
-       else if (viewPortWidth>600) k = 0.65;
-       else k = 0.4;
+
+       if (viewPortWidth>1600) k = 735/viewPortHeight;
+       else k = 0.57;
 
         let scroll = this.scrollY;
+        console.log(viewPortHeight, scroll)
        if(scroll > k*viewPortHeight) {
            navBar.style.color = '#2c2c2c'
            navBar.querySelector('button').style.border = '1px solid #2c2c2c'
