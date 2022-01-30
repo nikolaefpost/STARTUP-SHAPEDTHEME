@@ -94,7 +94,6 @@ window.onload = function () {
        else k = 0.57;
 
         let scroll = this.scrollY;
-        console.log(viewPortHeight, scroll)
        if(scroll > k*viewPortHeight) {
            navBar.style.color = '#2c2c2c'
            navBar.querySelector('button').style.border = '1px solid #2c2c2c'
@@ -104,4 +103,92 @@ window.onload = function () {
            navBar.querySelector('button').style.border = '1px solid white'
        }
     });
+
+    var wizards = [
+        {
+            name: 'Harry Potter',
+            house: 'Gryfindor'
+        },
+        {
+            name: 'Cedric Diggory',
+            house: 'Hufflepuff'
+        },
+        {
+            name: 'Tonks',
+            house: 'Hufflepuff'
+        },
+        {
+            name: 'Ronald Weasley',
+            house: 'Gryfindor'
+        },
+        {
+            name: 'Hermione Granger',
+            house: 'Gryfindor'
+        }];
+
+
+    let myNewArray = wizards.reduce(function (accumulator, current) {
+        if (current.house === 'Hufflepuff'){
+            accumulator.push(current.name)
+        }
+        return accumulator
+    }, [])
+
+    let myNewArray0 = wizards.map((item)=>{
+        if (item.house === 'Hufflepuff'){
+            return item.name
+        }
+    })
+
+    let myNewArray1 = [1,2,3].reduce((acc, cur)=>{
+        acc.push(cur*2)
+        return acc
+    },[])
+
+
+    let obj={};
+    for (let i=1; i<=10; i++){
+        obj['key'+i]='mean'+i;
+    }
+
+    function makeCounter() {
+        let count = 0;
+
+        return function() {
+            return count++;
+        };
+    }
+
+    let counter = makeCounter();
+    counter()
+    console.log(counter())
+    console.log(obj)
+
+
+
+    // const array1 = [‘test1’, ‘test2’, ‘test3’];
+    //
+    // array1.reduce((acc, curr, i)=>{
+    //     let i = array1.findIndex(i=>)
+    //     acc[i]=curr;
+    //     return acc
+    // },{})
+
+
+
+    const array = [{color: 'white', id: 2}, {color: 'black', id: 3}, {color: 'black', id: 500}];
+
+
+  let ss =  array.reduce((acc, cur,ind)=>{
+      console.log(typeof acc[cur.color])
+      if(typeof acc[cur.color] ==='object'){
+          let q = acc[cur.color];
+          q[cur.id] = cur;
+          acc[cur.color]=q;
+      }else {
+          acc[cur.color] = {[cur.id]: cur}
+      }
+        return acc
+    },{})
+    console.log(ss)
 }
